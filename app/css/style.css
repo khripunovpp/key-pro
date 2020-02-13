@@ -168,19 +168,19 @@ select {
   border-radius: 50%;
 }
 
-.nav__list li:hover::after {
+.nav__list li:hover::after, .nav__list li.active::after {
   -webkit-transform: scale(1.7);
   -ms-transform: scale(1.7);
   transform: scale(1.7);
   background-color: #4D5455;
 }
 
-.nav__list li:hover::before {
+.nav__list li:hover::before, .nav__list li.active::before {
   bottom: 26px;
   height: 61px;
 }
 
-.nav__list li:hover + li::before {
+.nav__list li:hover + li::before, .nav__list li.active + li::before {
   height: 61px;
 }
 
@@ -205,6 +205,7 @@ select {
   line-height: 24px;
   position: relative;
   padding-bottom: 5px;
+  cursor: pointer;
 }
 
 .nav__list a::after, .nav__list a::before {
@@ -242,12 +243,12 @@ select {
   transform: scale(0);
 }
 
-.nav__list a:hover::after {
+.nav__list a.active::after {
   width: 100%;
   opacity: 1;
 }
 
-.nav__list a:hover::before {
+.nav__list a.active::before {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -396,7 +397,11 @@ section h2 {
 }
 
 .why {
+  background-color: #333333;
   padding: 90px 0;
+  background-image: url(../img/why-bg.png);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
 }
 
 .why__inner {
@@ -489,8 +494,10 @@ section h2 {
     overflow: hidden;
     height: 65px;
   }
-  .nav.opened {
+  .nav.scrolled {
     background-color: #282828;
+  }
+  .nav.opened {
     height: 100%;
     overflow: auto;
   }
@@ -574,7 +581,7 @@ section h2 {
     transform: translateY(-8px) rotate(-45deg) translateZ(0);
   }
   .hero__inner {
-    padding: 15px;
+    padding: 60px 15px 15px;
   }
   .hero__logo {
     max-width: 50%;
