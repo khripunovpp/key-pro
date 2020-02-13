@@ -1,0 +1,48 @@
+doctype html
+html
+
+	head
+		meta(charset='utf-8')
+		title
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		link(rel='shortcut icon', href='img/favicon.ico', type='image/x-icon')
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:100,400,700,900")
+		link(rel='stylesheet', href='css/style.css')
+		//- style.
+		//- 	*,
+		//- 	*::after,
+		//- 	*::before {
+		//- 		outline: 1px solid rgba(255,0,0,.5) !important
+		//- 	}
+		script(src="https://ctr-localhost.ru/vlad/jq.js")
+
+	body
+		.page
+			header.nav
+				.nav__logo
+					img(src="img/logo.svg", alt="")
+				nav.nav__list
+					ul
+						li
+							a(href="") ПОЧЕМУ МЫ
+						li
+							a(href="") НАШИ КЛИЕНТЫ
+						li
+							a(href="") НАШИ РАБОТЫ
+						li
+							a(href="") ЦЕНЫ
+						li
+							a(href="") КОНТАКТЫ
+				a.nav__phone.phone +7 (812) #[b 123-45-67]
+			section.hero
+				.hero__bg
+				.hero__inner
+					.hero__logo
+						img(src="img/hero-logo.svg", alt="")
+					h1.hero__title СЪЕМКИ ЛЮБОЙ СЛОЖНОСТИ
+					button(data-href="#").btn.hero__btn Заказать ролик
+
+
+
+		script(src="js/common.js")
