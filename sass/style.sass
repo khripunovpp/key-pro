@@ -267,8 +267,50 @@ select
 	&:hover
 		background-color: $color
 
+section h2
+	font-size: 55px
+	line-height: 65px
+	color: #fff
+	border-bottom: 3px solid $color
+	display: inline-block
+	text-transform: uppercase
+	margin: 0 0 80px
 
-
+.why
+	padding: 90px 0
+	&__inner
+		padding-left: 400px
+		position: relative
+	&__title
+		position: absolute
+		left: 0
+		top: 0
+	&__list
+		padding-top: 16px
+	&__item
+		position: relative
+		padding-left: 75px
+		min-height: 75px
+		max-width: 760px
+		&+&
+			margin-top: 60px
+		&-icon
+			width: 55px
+			height: 100px
+			background-size: 50px
+			background-position: 50% 0
+			background-repeat: no-repeat
+			position: absolute
+			top: -15px
+			left: 0
+		&-text
+			font-size: 25px
+			line-height: 33px
+			margin: 0
+			color: #fff
+			strong,
+			b
+				font-size: 50px
 
 //ALWAYS END
 @import "media"

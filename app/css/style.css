@@ -385,6 +385,79 @@ select {
   background-color: #CE2C1B;
 }
 
+section h2 {
+  font-size: 55px;
+  line-height: 65px;
+  color: #fff;
+  border-bottom: 3px solid #CE2C1B;
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0 0 80px;
+}
+
+.why {
+  padding: 90px 0;
+}
+
+.why__inner {
+  padding-left: 400px;
+  position: relative;
+}
+
+.why__title {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.why__list {
+  padding-top: 16px;
+}
+
+.why__item {
+  position: relative;
+  padding-left: 75px;
+  min-height: 75px;
+  max-width: 760px;
+}
+
+.why__item + .why__item {
+  margin-top: 60px;
+}
+
+.why__item-icon {
+  width: 55px;
+  height: 100px;
+  background-size: 50px;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -15px;
+  left: 0;
+}
+
+.why__item-text {
+  font-size: 25px;
+  line-height: 33px;
+  margin: 0;
+  color: #fff;
+}
+
+.why__item-text strong,
+.why__item-text b {
+  font-size: 50px;
+}
+
+@media only screen and (max-width: 1650px) {
+  .why__inner {
+    padding-left: 0;
+    padding-right: 240px;
+  }
+  .why__title {
+    position: relative;
+  }
+}
+
 @media only screen and (max-width: 1450px) {
   .hero__logo {
     max-width: 200px;
@@ -516,6 +589,41 @@ select {
   .hero__btn {
     min-width: auto;
     width: 100%;
+  }
+  section h2 {
+    font-size: 45px;
+    margin-bottom: 50px;
+  }
+  .why__inner {
+    padding-right: 0;
+  }
+  .why__item {
+    max-width: none;
+  }
+  .why__item + .why__item {
+    margin-top: 40px;
+  }
+  .why__item-text {
+    font-size: 20px;
+  }
+  .why__item-text strong,
+  .why__item-text b {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .why__item {
+    padding-left: 0;
+    padding-top: 70px;
+    text-align: center;
+  }
+  .why__item-icon {
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
 

@@ -1,5 +1,14 @@
 @import "bourbon"
 
+	
+@media only screen and (max-width : 1650px)
+	.why
+		&__inner
+			padding-left: 0
+			padding-right: 240px
+		&__title
+			position: relative
+
 @media only screen and (max-width : 1450px)
 	.hero
 		&__logo
@@ -98,6 +107,34 @@
 		&__btn
 			min-width: auto
 			width: 100%
+	section h2
+		font-size: 45px
+		margin-bottom: 50px
+
+	.why
+		&__inner
+			padding-right: 0
+		&__item
+			max-width: none
+			&+&
+				margin-top: 40px
+			&-text
+				font-size: 20px
+				strong,
+				b
+					font-size: 30px
+
+@media only screen and (max-width : 480px)
+	.why
+		&__item
+			padding-left: 0
+			padding-top: 70px
+			text-align: center
+			&-icon
+				left: 50%
+				top: 0
+				transform: translateX(-50%)
+
 
 @media only screen and (max-width : 991px) and (max-height : 520px)
 	.nav__phone
