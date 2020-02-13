@@ -25,10 +25,12 @@ $.fn.isOnScreen = function(shift) {
   return bounds.top <= viewport.bottom && bounds.bottom >= viewport.top;
 };
 
-var shift = 90;
+var shift = 50;
 
 var nav = $(".nav"),
   navBtn = $(".nav__btn");
+
+var lastScroll = 0;
 
 var scrollDetection = function() {
   $("section").each(function() {
@@ -50,6 +52,14 @@ var scrollDetection = function() {
   } else {
     nav.removeClass("scrolled");
   }
+
+  if (scrollTop > lastScroll){
+    nav.addClass("hide");
+    closeNav();
+ } else {
+    nav.removeClass("hide");
+ }
+ lastScroll = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
 };
 
 var navItems = $(".nav li");

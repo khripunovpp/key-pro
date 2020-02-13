@@ -818,14 +818,16 @@ section h2 {
     right: 0;
     bottom: auto;
     display: block;
-    -webkit-transition-property: background-color;
-    -o-transition-property: background-color;
-    transition-property: background-color;
-    -webkit-transition: .2s ease-out;
-    -o-transition: .2s ease-out;
-    transition: .2s ease-out;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
     overflow: hidden;
     height: 65px;
+  }
+  .nav.hide {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
   }
   .nav.scrolled {
     background-color: #282828;
@@ -849,6 +851,8 @@ section h2 {
     -webkit-transition: .2s ease-out;
     -o-transition: .2s ease-out;
     transition: .2s ease-out;
+    z-index: 1;
+    position: relative;
   }
   .nav__list li + li {
     margin-top: 30px;
@@ -872,10 +876,12 @@ section h2 {
     -o-transition: .2s ease-out;
     transition: .2s ease-out;
     position: absolute;
+    z-index: 10;
     bottom: 15px;
     left: 15px;
     width: -webkit-calc(100% - 30px);
     width: calc(100% - 30px);
+    background-color: #282828;
   }
   .nav__btn {
     padding: 15px;
@@ -915,6 +921,9 @@ section h2 {
     -webkit-transform: translateY(-8px) rotate(-45deg) translateZ(0);
     transform: translateY(-8px) rotate(-45deg) translateZ(0);
   }
+  .hero {
+    min-height: 450px;
+  }
   .hero__inner {
     padding: 60px 15px 15px;
   }
@@ -936,6 +945,9 @@ section h2 {
     font-size: 30px;
     margin-bottom: 50px;
   }
+  .why {
+    padding: 50px 0;
+  }
   .why__inner {
     padding-right: 0;
   }
@@ -952,6 +964,9 @@ section h2 {
   .why__item-text b {
     font-size: 30px;
   }
+  .clients {
+    padding: 50px 0;
+  }
   .clients__inner {
     padding-right: 0;
   }
@@ -960,11 +975,13 @@ section h2 {
   }
   .pricelist {
     background-image: none;
+    padding: 50px 0;
   }
   .pricelist__inner {
     padding-right: 0;
   }
   .contacts {
+    padding: 50px 0;
     background-image: none;
     background-color: #161616;
   }

@@ -55,10 +55,11 @@
 		right: 0
 		bottom: auto
 		display: block
-		transition-property: background-color
-		transition: .2s ease-out
+		transition: all .2s ease
 		overflow: hidden
 		height: 65px
+		&.hide
+			transform: translateY(-100%)
 		&.scrolled
 			background-color: #282828
 		&.opened
@@ -74,6 +75,8 @@
 			opacity: 0
 			transition-property: visibility, opacity
 			transition: .2s ease-out
+			z-index: 1
+			position: relative
 			li+li
 				margin-top: 30px
 				&::before
@@ -92,9 +95,11 @@
 			transition-property: visibility, opacity
 			transition: .2s ease-out
 			position: absolute
+			z-index: 10
 			bottom: 15px
 			left: 15px
 			width: calc(100% - 30px)
+			background-color: #282828
 		&__btn
 			padding: 15px
 			line-height: 1
@@ -125,6 +130,7 @@
 						transform: translateY(-8px) rotate(-45deg) translateZ(0)
 
 	.hero
+		min-height: 450px
 		&__inner
 			padding: 60px 15px 15px
 		&__logo
@@ -143,6 +149,7 @@
 		margin-bottom: 50px
 
 	.why
+		padding: 50px 0
 		&__inner
 			padding-right: 0
 		&__item
@@ -156,6 +163,7 @@
 					font-size: 30px
 
 	.clients
+		padding: 50px 0
 		&__inner
 			padding-right: 0
 		&__list
@@ -163,10 +171,12 @@
 
 	.pricelist
 		background-image: none
+		padding: 50px 0
 		&__inner
 			padding-right: 0
 
 	.contacts
+		padding: 50px 0
 		background-image: none
 		background-color: #161616
 
