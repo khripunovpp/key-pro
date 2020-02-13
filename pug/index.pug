@@ -37,7 +37,7 @@ html
 						li
 							a(data-href="pricelist") ЦЕНЫ
 						li
-							a(href="") КОНТАКТЫ
+							a(data-href="contacts") КОНТАКТЫ
 				a.nav__phone.phone +7 (812) #[b 123-45-67]
 				
 			section.hero#hero
@@ -130,7 +130,27 @@ html
 						p.pricelist__disclamer #[strong *] ВСЕ РАБОТЫ ВЫПОЛНЯЮТСЯ «ПОД КЛЮЧ»
 
 
-
+			section.contacts#contacts
+				.container
+					.contacts__inner
+						h2.contacts__title Контакты
+						.contacts__tail
+							.contacts__left
+								a(href="tel:+7 (812) 123-45-68").contacts__phone +7 (812) 123-45-68
+								a(href="mailto:admin@key-pro.ru").contacts__email admin@key-pro.ru
+								.contacts__socials.socials
+									a(href="").socials__item.socials__item--vk
+									a(href="").socials__item.socials__item--instagram
+									a(href="").socials__item.socials__item--youtube
+									a(href="").socials__item.socials__item--vimeo
+							.contacts__right.form
+								h3.form__title Напишите нам
+								input(type="text", placeholder="Имя*").form__field
+								input(type="text", placeholder="Компания").form__field
+								input(type="email", placeholder="E-mail").form__field
+								input(type="tel", placeholder="Телефон*").form__field
+								textarea(rows="5", placeholder="Ваше сообщение").form__field
+								input(type="submit", vlaue="Отправить").btn.form__submit
 
 
 
