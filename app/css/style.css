@@ -184,6 +184,17 @@ select {
   height: 61px;
 }
 
+.nav__list li:hover a::after, .nav__list li.active a::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.nav__list li:hover a::before, .nav__list li.active a::before {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
 .nav__list li + li {
   margin-top: 60px;
 }
@@ -241,17 +252,6 @@ select {
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
-}
-
-.nav__list a.active::after {
-  width: 100%;
-  opacity: 1;
-}
-
-.nav__list a.active::before {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
 }
 
 .hero {
@@ -471,6 +471,77 @@ section h2 {
   margin: 30px;
 }
 
+.pricelist {
+  padding: 90px 0;
+  background-color: #333333;
+  background-image: url(../img/pricelist-bg.png);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+}
+
+.pricelist__list {
+  max-width: 920px;
+}
+
+.pricelist__item {
+  color: #fff;
+}
+
+.pricelist__item + .pricelist__item {
+  margin-top: 35px;
+}
+
+.pricelist__item-caption {
+  display: inline-block;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #fff;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.pricelist__item-icon, .pricelist__item-name, .pricelist__item-price {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.pricelist__item-icon {
+  max-width: 110px;
+  max-height: 95px;
+  margin-right: 10px;
+}
+
+.pricelist__item-name {
+  font-size: 40px;
+}
+
+.pricelist__item-price {
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.pricelist__item-description {
+  margin: 0;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 100;
+}
+
+.pricelist__disclamer {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #A0A0A0;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 60px 0 0;
+}
+
+.pricelist__disclamer strong {
+  color: #CE2C1B;
+}
+
 @media only screen and (max-width: 1650px) {
   .why__inner {
     padding-left: 0;
@@ -479,7 +550,8 @@ section h2 {
   .why__title {
     position: relative;
   }
-  .clients__inner {
+  .clients__inner,
+  .pricelist__inner {
     padding-right: 240px;
   }
 }
@@ -649,6 +721,12 @@ section h2 {
   .clients__list {
     text-align: center;
   }
+  .pricelist {
+    background-size: contain;
+  }
+  .pricelist__inner {
+    padding-right: 0;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -669,6 +747,17 @@ section h2 {
     max-width: 50%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .pricelist__item-icon {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .pricelist__item-price {
+    font-size: 20px;
+    display: block;
+    margin-left: 0;
+    margin-top: 10px;
   }
 }
 

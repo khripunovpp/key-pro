@@ -9,7 +9,8 @@
 		&__title
 			position: relative
 
-	.clients
+	.clients,
+	.pricelist
 		&__inner
 			padding-right: 240px
 
@@ -141,6 +142,11 @@
 		&__list
 			text-align: center
 
+	.pricelist
+		background-size: contain
+		&__inner
+			padding-right: 0
+
 
 @media only screen and (max-width : 480px)
 	.why
@@ -159,6 +165,18 @@
 				max-width: 50%
 				margin-left: auto
 				margin-right: auto
+
+	.pricelist
+		&__item
+			&-icon
+				display: block
+				margin-right: 0
+				margin-bottom: 10px
+			&-price
+				font-size: 20px
+				display: block
+				margin-left: 0
+				margin-top: 10px
 
 @media only screen and (max-width : 991px) and (max-height : 520px)
 	.nav__phone

@@ -129,6 +129,12 @@ select
 					height: 61px
 				&+li::before
 					height: 61px
+				a
+					&::after
+						width: 100%
+						opacity: 1
+					&::before
+						transform: scale(1)
 		li+li
 			margin-top: 60px
 			&::before
@@ -169,17 +175,7 @@ select
 				top: 8px
 				transition: transform .2s ease-out
 				transform: scale(0)
-			&:hover
-			&.active
-				&::after
-					width: 100%
-					opacity: 1
-				&::before
-					transform: scale(1)
 				
-
-
-
 .hero
 	height: 100vh
 	position: relative
@@ -320,7 +316,6 @@ section h2
 				font-size: 50px
 
 
-
 .clients
 	padding: 90px 0
 	background-image: url(../img/clients-bg.png)
@@ -335,6 +330,55 @@ section h2
 			vertical-align: middle
 			margin: 30px
 
+.pricelist
+	padding: 90px 0
+	background-color:  #333333
+	background-image: url(../img/pricelist-bg.png)
+	background-repeat: no-repeat
+	background-position: 50% 100%
+	&__list
+		max-width: 920px
+	&__item
+		color: #fff
+		&+&
+			margin-top: 35px
+		&-caption
+			display: inline-block
+			padding-bottom: 5px
+			border-bottom: 2px solid #fff
+			text-transform: uppercase
+			line-height: 1.2
+			font-weight: 700
+			margin-bottom: 15px
+		&-icon,
+		&-name,
+		&-price
+			display: inline-block
+			vertical-align: baseline
+		&-icon
+			max-width: 110px
+			max-height: 95px
+			margin-right: 10px
+		&-name
+			font-size: 40px
+		&-price
+			font-size: 30px
+			font-weight: 700
+			margin-left: 10px
+		&-description
+			margin: 0
+			font-size: 20px
+			line-height: 24px
+			font-weight: 100
+	&__disclamer
+		font-weight: 700
+		text-transform: uppercase
+		color: #A0A0A0
+		font-size: 20px
+		line-height: 24px
+		margin: 60px 0 0
+		strong
+			color: $color
 
 //ALWAYS END
 @import "media"

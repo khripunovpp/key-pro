@@ -33,9 +33,9 @@ html
 						li
 							a(data-href="clients") НАШИ КЛИЕНТЫ
 						li
-							a(href="") НАШИ РАБОТЫ
+							a(data-href="") НАШИ РАБОТЫ
 						li
-							a(href="") ЦЕНЫ
+							a(data-href="pricelist") ЦЕНЫ
 						li
 							a(href="") КОНТАКТЫ
 				a.nav__phone.phone +7 (812) #[b 123-45-67]
@@ -103,7 +103,31 @@ html
 							li
 								img(src="img/clients-logo-5.png", alt="")
 
+			section.pricelist#pricelist
+				.container
+					.pricelist__inner
+						h2.pricelist__title Цены
+						ul.pricelist__list
+							li.pricelist__item
+								.pricelist__item-caption
+									img(src="img/pricelist-icon-1.png", alt="").pricelist__item-icon
+									span.pricelist__item-name CASUAL
+									span.pricelist__item-price (24-49Т.Р)
+								p.pricelist__item-description #[strong Один день, одна камера.] Минимум приборов на съемке, максимум креатива в сценарии и аккуратности в монтаже. Бюджетно и качественно – это возможно!
+							li.pricelist__item
+								.pricelist__item-caption
+									img(src="img/pricelist-icon-2.png", alt="").pricelist__item-icon
+									span.pricelist__item-name BUSINESS
+									span.pricelist__item-price (49-89Т.Р)
+								p.pricelist__item-description #[strong Небольшая команда, среднее количество техники.] Прекрасный способ продемонстрировать Ваше новое произведение – будь то музыкальная композиция, товар или услуга; Видео категории business не только понравится давним ценителям Вашего творчества (клиентам и партнерам), но и привлечет новых.
+							li.pricelist__item
+								.pricelist__item-caption
+									img(src="img/pricelist-icon-3.png", alt="").pricelist__item-icon
+									span.pricelist__item-name IMAGE
+									span.pricelist__item-price (ОТ 89Т.Р.)
+								p.pricelist__item-description #[strong К Вашим услугам – все последние достижения кинопроизводства:] многокамерная съемка и операторские краны, steadycam и 3D-графика, а главное – наши умение и желание снимать кино. Image video – отличный способ заявить о себе так, чтобы Вас запомнили надолго – и с лучшей стороны.
 
+						p.pricelist__disclamer #[strong *] ВСЕ РАБОТЫ ВЫПОЛНЯЮТСЯ «ПОД КЛЮЧ»
 
 
 

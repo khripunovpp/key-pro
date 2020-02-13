@@ -34,7 +34,7 @@ var scrollDetection = function() {
   $("section").each(function() {
     var that = this;
 
-    if ($(that).isOnScreen(shift)) {
+    if ($(that).isOnScreen($(that).innerHeight()/2)) {
       hightlight($(that).attr("id"));
     }
   });
@@ -53,11 +53,10 @@ var navItems = $(".nav li");
 var hightlight = function(id) {
   if (!id) return;
   console.log(id);
-  navItems.removeClass("active").find("a").removeClass("active");
+  navItems.siblings().removeClass("active");
   navItems
     .find('a[data-href="' + id + '"]')
-    .addClass("active")
-    .closest("li")
+    .closest('li')
     .addClass("active");
 };
 
