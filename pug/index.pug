@@ -31,7 +31,7 @@ html
 						li
 							a(data-href="why") ПОЧЕМУ МЫ
 						li
-							a(href="") НАШИ КЛИЕНТЫ
+							a(data-href="clients") НАШИ КЛИЕНТЫ
 						li
 							a(href="") НАШИ РАБОТЫ
 						li
@@ -40,7 +40,7 @@ html
 							a(href="") КОНТАКТЫ
 				a.nav__phone.phone +7 (812) #[b 123-45-67]
 				
-			section.hero
+			section.hero#hero
 				.hero__bg
 				.hero__inner
 					.hero__logo
@@ -86,5 +86,28 @@ html
 							li.why__item
 								.why__item-icon(style="background-image:url(img/why-icon-5.png)")
 								p.why__item-text #[strong Бесплатные консультации.] Вне зависимости от Вашего решения мы будем рады поделиться нашим опытом.
+
+			section.clients#clients
+				.container
+					.clients__inner
+						h2.clients__title Наши КЛИЕНТЫ
+						ul.clients__list
+							li
+								img(src="img/clients-logo-1.png", alt="")
+							li
+								img(src="img/clients-logo-2.png", alt="")
+							li
+								img(src="img/clients-logo-3.png", alt="")
+							li
+								img(src="img/clients-logo-4.png", alt="")
+							li
+								img(src="img/clients-logo-5.png", alt="")
+
+
+
+
+
+
+
 
 		script(src="js/common.js")

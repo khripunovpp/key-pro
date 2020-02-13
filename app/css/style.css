@@ -146,17 +146,16 @@ select {
 .nav__list li {
   padding-right: 40px;
   position: relative;
-  z-index: 1;
 }
 
 .nav__list li::after, .nav__list li::before {
   content: '';
   position: absolute;
-  -webkit-transition: bottom .7s ease-out, height .7s ease-out, background-color 0s ease-out, -webkit-transform .7s ease-out;
-  transition: bottom .7s ease-out, height .7s ease-out, background-color 0s ease-out, -webkit-transform .7s ease-out;
-  -o-transition: transform .7s ease-out, bottom .7s ease-out, height .7s ease-out, background-color 0s ease-out;
-  transition: transform .7s ease-out, bottom .7s ease-out, height .7s ease-out, background-color 0s ease-out;
-  transition: transform .7s ease-out, bottom .7s ease-out, height .7s ease-out, background-color 0s ease-out, -webkit-transform .7s ease-out;
+  -webkit-transition: bottom .2s ease-out, height .2s ease-out, background-color .2s ease-out, -webkit-transform .2s ease-out;
+  transition: bottom .2s ease-out, height .2s ease-out, background-color .2s ease-out, -webkit-transform .2s ease-out;
+  -o-transition: transform .2s ease-out, bottom .2s ease-out, height .2s ease-out, background-color .2s ease-out;
+  transition: transform .2s ease-out, bottom .2s ease-out, height .2s ease-out, background-color .2s ease-out;
+  transition: transform .2s ease-out, bottom .2s ease-out, height .2s ease-out, background-color .2s ease-out, -webkit-transform .2s ease-out;
 }
 
 .nav__list li::after {
@@ -166,6 +165,7 @@ select {
   height: 18px;
   border: 1px solid #fff;
   border-radius: 50%;
+  z-index: 2;
 }
 
 .nav__list li:hover::after, .nav__list li.active::after {
@@ -211,7 +211,7 @@ select {
 .nav__list a::after, .nav__list a::before {
   content: '';
   position: absolute;
-  z-index: 2;
+  z-index: 3;
 }
 
 .nav__list a::after {
@@ -221,9 +221,9 @@ select {
   opacity: 0;
   height: 1px;
   background-color: #fff;
-  -webkit-transition: width .7s ease-out;
-  -o-transition: width .7s ease-out;
-  transition: width .7s ease-out;
+  -webkit-transition: width .3s ease-out;
+  -o-transition: width .3s ease-out;
+  transition: width .3s ease-out;
 }
 
 .nav__list a::before {
@@ -453,6 +453,24 @@ section h2 {
   font-size: 50px;
 }
 
+.clients {
+  padding: 90px 0;
+  background-image: url(../img/clients-bg.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.clients__list {
+  margin: -30px;
+}
+
+.clients__list li {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 30px;
+}
+
 @media only screen and (max-width: 1650px) {
   .why__inner {
     padding-left: 0;
@@ -460,6 +478,9 @@ section h2 {
   }
   .why__title {
     position: relative;
+  }
+  .clients__inner {
+    padding-right: 240px;
   }
 }
 
@@ -479,6 +500,9 @@ section h2 {
 }
 
 @media only screen and (max-width: 991px) {
+  body.fixed {
+    overflow: hidden;
+  }
   .nav {
     padding: 15px;
     width: 100%;
@@ -500,6 +524,7 @@ section h2 {
   .nav.opened {
     height: 100%;
     overflow: auto;
+    background-color: #282828;
   }
   .nav.opened .nav__list,
   .nav.opened .nav__phone {
@@ -523,8 +548,9 @@ section h2 {
     height: 35px;
   }
   .nav__list li:hover::before,
-  .nav__list li:hover + li::before {
-    height: 31px;
+  .nav__list li:hover + li::before, .nav__list li.active::before,
+  .nav__list li.active + li::before {
+    height: 31px !important;
   }
   .nav__phone {
     display: block;
@@ -598,7 +624,7 @@ section h2 {
     width: 100%;
   }
   section h2 {
-    font-size: 45px;
+    font-size: 30px;
     margin-bottom: 50px;
   }
   .why__inner {
@@ -617,6 +643,12 @@ section h2 {
   .why__item-text b {
     font-size: 30px;
   }
+  .clients__inner {
+    padding-right: 0;
+  }
+  .clients__list {
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -631,6 +663,12 @@ section h2 {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
+  }
+  .clients__list li {
+    display: block;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

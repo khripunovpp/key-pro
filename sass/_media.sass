@@ -9,6 +9,10 @@
 		&__title
 			position: relative
 
+	.clients
+		&__inner
+			padding-right: 240px
+
 @media only screen and (max-width : 1450px)
 	.hero
 		&__logo
@@ -21,6 +25,9 @@
 		right: 15px
 
 @media only screen and (max-width : 991px)
+
+	body.fixed
+		overflow: hidden
 
 	.nav
 		padding: 15px
@@ -37,6 +44,7 @@
 		&.opened
 			height: 100%
 			overflow: auto
+			background-color: #282828
 			.nav__list,
 			.nav__phone
 				visibility: visible
@@ -51,10 +59,11 @@
 				&::before
 					height: 35px
 			li
-				&:hover
+				&:hover,
+				&.active
 					&::before,
 					&+li::before
-						height: 31px
+						height: 31px !important
 						
 		&__phone
 			display: block
@@ -108,8 +117,9 @@
 		&__btn
 			min-width: auto
 			width: 100%
+
 	section h2
-		font-size: 45px
+		font-size: 30px
 		margin-bottom: 50px
 
 	.why
@@ -125,6 +135,13 @@
 				b
 					font-size: 30px
 
+	.clients
+		&__inner
+			padding-right: 0
+		&__list
+			text-align: center
+
+
 @media only screen and (max-width : 480px)
 	.why
 		&__item
@@ -135,7 +152,13 @@
 				left: 50%
 				top: 0
 				transform: translateX(-50%)
-
+	.clients
+		&__list
+			li
+				display: block
+				max-width: 50%
+				margin-left: auto
+				margin-right: auto
 
 @media only screen and (max-width : 991px) and (max-height : 520px)
 	.nav__phone

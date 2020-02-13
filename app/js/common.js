@@ -27,6 +27,9 @@ $.fn.isOnScreen = function(shift) {
 
 var shift = 90;
 
+var nav = $(".nav"),
+navBtn = $(".nav__btn");
+
 var scrollDetection = function() {
   $("section").each(function() {
     var that = this;
@@ -39,7 +42,9 @@ var scrollDetection = function() {
   var scrollTop = $(document).scrollTop();
 
   if (scrollTop > 5) {
+    nav.addClass('scrolled')
   } else {
+    nav.removeClass('scrolled')
   }
 };
 
@@ -48,7 +53,7 @@ var navItems = $(".nav li");
 var hightlight = function(id) {
   if (!id) return;
   console.log(id);
-  navItems.find("a").removeClass("active");
+  navItems.removeClass("active").find("a").removeClass("active");
   navItems
     .find('a[data-href="' + id + '"]')
     .addClass("active")
@@ -56,13 +61,19 @@ var hightlight = function(id) {
     .addClass("active");
 };
 
+var closeNav = function() {
+    navBtn.removeClass("opened");
+    nav.removeClass("opened");
+};
+
+var page = $('body');
+
 $(function() {
-  var nav = $(".nav"),
-    navBtn = $(".nav__btn");
   navBtn.on("click", function(e) {
     e.preventDefault();
     navBtn.toggleClass("opened");
     nav.toggleClass("opened");
+    page.toggleClass("fixed");
   });
 
   scrollDetection();
@@ -70,6 +81,7 @@ $(function() {
 
   $(".nav a, .scroll").on("click", function(e) {
     e.preventDefault();
+    closeNav();
     var id = $(this).attr("data-href");
     var section = $("#" + id).offset().top;
     $("html, body").animate({ scrollTop: section }, 666);
