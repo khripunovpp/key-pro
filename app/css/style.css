@@ -138,14 +138,17 @@ select {
 .nav__list li {
   padding-right: 40px;
   position: relative;
+  z-index: 1;
 }
 
 .nav__list li::after, .nav__list li::before {
   content: '';
   position: absolute;
-  -webkit-transition: all .2s ease-out;
-  -o-transition: all .2s ease-out;
-  transition: all .2s ease-out;
+  -webkit-transition: bottom .7s ease-out, height .7s ease-out, background-color 0s ease-out, -webkit-transform .7s ease-out;
+  transition: bottom .7s ease-out, height .7s ease-out, background-color 0s ease-out, -webkit-transform .7s ease-out;
+  -o-transition: transform .7s ease-out, bottom .7s ease-out, height .7s ease-out, background-color 0s ease-out;
+  transition: transform .7s ease-out, bottom .7s ease-out, height .7s ease-out, background-color 0s ease-out;
+  transition: transform .7s ease-out, bottom .7s ease-out, height .7s ease-out, background-color 0s ease-out, -webkit-transform .7s ease-out;
 }
 
 .nav__list li::after {
@@ -161,6 +164,7 @@ select {
   -webkit-transform: scale(1.7);
   -ms-transform: scale(1.7);
   transform: scale(1.7);
+  background-color: #4D5455;
 }
 
 .nav__list li:hover::before {
@@ -192,11 +196,13 @@ select {
   font-size: 20px;
   line-height: 24px;
   position: relative;
+  padding-bottom: 5px;
 }
 
 .nav__list a::after, .nav__list a::before {
   content: '';
   position: absolute;
+  z-index: 2;
 }
 
 .nav__list a::after {
@@ -206,9 +212,9 @@ select {
   opacity: 0;
   height: 1px;
   background-color: #fff;
-  -webkit-transition: width .2s ease-out;
-  -o-transition: width .2s ease-out;
-  transition: width .2s ease-out;
+  -webkit-transition: width .7s ease-out;
+  -o-transition: width .7s ease-out;
+  transition: width .7s ease-out;
 }
 
 .nav__list a::before {
