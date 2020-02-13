@@ -369,6 +369,9 @@ select {
   transition: all .2s ease-out;
   text-align: center;
   max-width: 250px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .btn:hover {
@@ -392,6 +395,9 @@ select {
   transition: all .2s ease-out;
   min-width: 240px;
   text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .phone:hover {
@@ -556,10 +562,11 @@ section h2 {
 
 .contacts {
   padding: 90px 0;
-  background-color: #333333;
+  background-color: #212121;
   background-image: url(../img/contacts-bg.png);
   background-repeat: no-repeat;
   background-position: 90% 100%;
+  background-size: contain;
 }
 
 .contacts__tail {
@@ -571,12 +578,17 @@ section h2 {
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding-right: 120px;
 }
 
 .contacts__right {
   margin-left: 80px;
-  width: 100%;
+  width: -webkit-calc(100% - 410px);
+  width: calc(100% - 410px);
 }
 
 .contacts__phone {
@@ -698,10 +710,16 @@ section h2 {
   padding: 10px;
   color: #3D3D3D;
   font-weight: 100;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-bottom: 1px solid #9F9F9F;
 }
 
-.form__field + .form__field {
-  border-top: 1px solid #9F9F9F;
+.form__error {
+  margin: 0;
+  background-color: #ffcaca;
+  padding: 5px 10px;
 }
 
 .form__submit {
@@ -709,6 +727,37 @@ section h2 {
   -ms-flex-item-align: end;
   align-self: flex-end;
   min-width: 245px;
+  max-width: none;
+}
+
+.form__result {
+  margin-top: 20px;
+  padding: 5px 10px;
+  text-align: center;
+  background-color: #fff6a9;
+}
+
+.form__result.success {
+  background-color: #7dff83;
+}
+
+.footer {
+  padding: 45px 0;
+  text-align: center;
+  color: #fff;
+  background-color: #CE2C1B;
+}
+
+.footer__logo, .footer__slogan {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer__slogan {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 100;
+  margin-left: 40px;
 }
 
 @media only screen and (max-width: 1650px) {
@@ -749,6 +798,7 @@ section h2 {
   .contacts__right {
     margin-left: 0;
     margin-top: 30px;
+    width: 100%;
   }
 }
 
@@ -916,7 +966,7 @@ section h2 {
   }
   .contacts {
     background-image: none;
-    background-color: transparent;
+    background-color: #161616;
   }
 }
 
@@ -962,6 +1012,10 @@ section h2 {
   .form__submit {
     width: 100%;
     max-width: none;
+  }
+  .footer__slogan {
+    margin-top: 20px;
+    margin-left: 0;
   }
 }
 

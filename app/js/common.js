@@ -63,16 +63,13 @@ var hightlight = function(id) {
     .addClass("active");
 };
 
-
 var page = $("body");
 
 var closeNav = function() {
   navBtn.removeClass("opened");
   nav.removeClass("opened");
   page.removeClass("fixed");
-
 };
-
 
 $(function() {
   navBtn.on("click", function(e) {
@@ -85,7 +82,7 @@ $(function() {
   scrollDetection();
   $(document).on("scroll", scrollDetection);
 
-  $(".nav a, .scroll").on("click", function(e) {
+  $("[data-href]").on("click", function(e) {
     e.preventDefault();
     closeNav();
     var id = $(this).attr("data-href");

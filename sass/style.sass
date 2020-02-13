@@ -245,6 +245,7 @@ select
 	transition: all .2s ease-out
 	text-align: center
 	max-width: 250px
+	appearance: none
 	&:hover
 		color: $color
 		background-color: #fff
@@ -263,6 +264,7 @@ select
 	transition: all .2s ease-out
 	min-width: 240px
 	text-align: center
+	appearance: none
 	&:hover
 		background-color: $color
 
@@ -384,17 +386,19 @@ section h2
 
 .contacts
 	padding: 90px 0
-	background-color:  #333333
+	background-color:  #212121
 	background-image: url(../img/contacts-bg.png)
 	background-repeat: no-repeat
 	background-position: 90% 100%
+	background-size: contain
 	&__tail
 		display: flex
 		align-items: flex-start
+		justify-content: space-between
 		padding-right: 120px
 	&__right
 		margin-left: 80px
-		width: 100%
+		width: calc(100% - 410px)
 	&__phone
 		color: #fff
 		font-weight: 700
@@ -474,13 +478,38 @@ section h2
 		padding: 10px
 		color:  #3D3D3D
 		font-weight: 100
-		&+&
-			border-top: 1px solid #9F9F9F
+		appearance: none
+		border-bottom: 1px solid #9F9F9F
+	&__error
+		margin: 0
+		background-color: #ffcaca
+		padding: 5px 10px
 	&__submit
 		align-self: flex-end
 		min-width: 245px
+		max-width: none
+	&__result
+		margin-top: 20px
+		padding: 5px 10px
+		text-align: center
+		background-color: #fff6a9
+		&.success
+			background-color: #7dff83
 
-			
+.footer
+	padding: 45px 0
+	text-align: center
+	color: #fff
+	background-color: $color
+	&__logo,
+	&__slogan
+		display: inline-block
+		vertical-align: middle
+	&__slogan
+		font-size: 20px
+		line-height: 1
+		font-weight: 100
+		margin-left: 40px
 
 //ALWAYS END
 @import "media"
