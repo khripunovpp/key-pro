@@ -53,13 +53,13 @@ var scrollDetection = function() {
     nav.removeClass("scrolled");
   }
 
-  if (scrollTop > lastScroll){
+  if (scrollTop > lastScroll) {
     nav.addClass("hide");
     closeNav();
- } else {
+  } else {
     nav.removeClass("hide");
- }
- lastScroll = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+  }
+  lastScroll = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
 };
 
 var navItems = $(".nav li");
@@ -81,6 +81,93 @@ var closeNav = function() {
   page.removeClass("fixed");
 };
 
+var players = {};
+
+var projects = function() {
+  var tag = document.createElement("script");
+
+  var list = $(".projects__list");
+
+  var slider = list.slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: $(".projects__prev"),
+    nextArrow: $(".projects__next"),
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  });
+
+  var hiddenItems,
+    currentItems,
+    items = $(".projects__item"),
+    navs = $(".projects__nav");
+
+  $(".projects__all").on("click", function(e) {
+    e.preventDefault();
+    hiddenItems = items.not(".slick-active");
+    currentItems = items.filter(".slick-active");
+    slider.slick("unslick");
+    list.html("");
+    list.append(currentItems);
+    list.append(hiddenItems);
+    navs.hide();
+  });
+};
+
+function onPlayerReady(event) {
+  $(event.target.a)
+    .closest(".project")
+    .addClass("playing")
+    .removeClass("loading");
+}
+
+var makePlayers = function() {
+  $("body").on("click", function(e) {
+    e.preventDefault();
+    var target = $(e.target).closest(".project__play");
+    if (!target.length) return;
+
+    var item = target.closest(".project__video");
+
+    var id = item.attr("data-youtube-id");
+
+    if (item.hasClass("loaded")) return;
+
+    item.addClass("loaded loading");
+
+    player = new YT.Player(
+      document.querySelector("[data-youtube-id=" + id + "] .project__frame"),
+      {
+        height: "100",
+        width: "100",
+        videoId: id,
+        events: {
+          onReady: onPlayerReady
+        }
+      }
+    );
+
+    console.log(id);
+  });
+};
+
+function onYouTubeIframeAPIReady() {
+  makePlayers();
+}
+
 $(function() {
   navBtn.on("click", function(e) {
     e.preventDefault();
@@ -101,4 +188,5 @@ $(function() {
     var offset = section.offset().top;
     Util.scrollToEl(section);
   });
+  projects();
 });

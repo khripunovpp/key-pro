@@ -6,8 +6,9 @@ html
 		title
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
 		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-		link(rel='shortcut icon', href='img/favicon.ico', type='image/x-icon')
+		link(rel='icon', href='img/icon.png', type='image/x-icon')
 		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:100,400,700,900")
+		link(rel='stylesheet', href='css/slick-theme.css')
 		link(rel='stylesheet', href='css/style.css')
 		//- style.
 		//- 	*,
@@ -33,7 +34,7 @@ html
 						li
 							a(data-href="clients") НАШИ КЛИЕНТЫ
 						li
-							a(data-href="") НАШИ РАБОТЫ
+							a(data-href="projects") НАШИ РАБОТЫ
 						li
 							a(data-href="pricelist") ЦЕНЫ
 						li
@@ -102,6 +103,72 @@ html
 								img(src="img/clients-logo-4.png", alt="")
 							li
 								img(src="img/clients-logo-5.png", alt="")
+			
+			section.projects#projects
+				.container
+					.projects__inner
+						h2.projects__title Наши работы
+						ul.projects__list
+							li.projects__item.project.active
+								.project__video(data-youtube-id="MvAQIeF0lmE")
+									.project__poster(style="background-image:url(img/poster-1.jpg)")
+									.project__frame
+									button.project__play
+								p.project__caption Lorem ipsum 1
+									span (ыаыапыв ывыа)
+								p.project__description Lorem ipsum dваав вп впыв пвп ывп выпв ыпыв пвп ыolor sit amet, consectetuer adipiscing elit, sed diam nonum
+							li.projects__item.project
+								.project__video(data-youtube-id="GTRAEpllGZo")
+									.project__poster
+									.project__frame
+									button.project__play
+								p.project__caption Lorem ipsum 2
+									span (ыаыапыв ывыа)
+								p.project__description Lorem ipsum dваав вп впыв пвп ывп выпв ыпыв пвп ыolor sit amet, consectetuer adipiscing elit, sed diam nonum
+							li.projects__item.project
+								.project__video
+									.project__poster
+									.project__frame
+									button.project__play
+								p.project__caption Lorem ipsum 3
+									span (ыаыапыв ывыа)
+								p.project__description Lorem ipsum dваав вп впыв пвп ывп выпв ыпыв пвп ыolor sit amet, consectetuer adipiscing elit, sed diam nonum
+							li.projects__item.project
+								.project__video
+									.project__poster
+									.project__frame
+									button.project__play
+								p.project__caption Lorem ipsum 4
+									span (ыаыапыв ывыа)
+								p.project__description Lorem ipsum dваав вп впыв пвп ывп выпв ыпыв пвп ыolor sit amet, consectetuer adipiscing elit, sed diam nonum
+							li.projects__item.project
+								.project__video
+									.project__poster
+									.project__frame
+									button.project__play
+								p.project__caption Lorem ipsum 5
+									span (ыаыапыв ывыа)
+								p.project__description Lorem ipsum dваав вп впыв пвп ывп выпв ыпыв пвп ыolor sit amet, consectetuer adipiscing elit, sed diam nonum
+							li.projects__item.project
+								.project__video
+									.project__poster
+									.project__frame
+									button.project__play
+								p.project__caption Lorem ipsum 6
+									span (ыаыапыв ывыа)
+								p.project__description Lorem ipsum dваав вп впыв пвп ывп выпв ыпыв пвп ыolor sit amet, consectetuer adipiscing elit, sed diam nonum
+							li.projects__item.project
+								.project__video
+									.project__poster
+									.project__frame
+									button.project__play
+								p.project__caption Lorem ipsum 7
+									span (ыаыапыв ывыа)
+								p.project__description Lorem ipsum dваав вп впыв пвп ывп выпв ыпыв пвп ыolor sit amet, consectetuer adipiscing elit, sed diam nonum
+						.projects__nav
+							button.projects__prev
+							button.projects__all ПОКАЗАТЬ ЕЩЕ
+							button.projects__next
 
 			section.pricelist#pricelist
 				.container
@@ -160,4 +227,6 @@ html
 						img(src="img/logo.svg", alt="").footer__logo
 						span.footer__slogan СЪЕМКИ ЛЮБОЙ СЛОЖНОСТИ
 
+		script(src="https://www.youtube.com/iframe_api")
+		script(src="js/slick.min.js")
 		script(src="js/common.js")

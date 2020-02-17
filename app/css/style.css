@@ -489,6 +489,204 @@ section h2 {
   margin: 30px;
 }
 
+.projects {
+  padding: 90px 0;
+  background-image: url(../img/projects-bg.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.projects__list {
+  overflow: hidden;
+  margin-right: -80px;
+  max-width: 1350px;
+}
+
+.projects__item {
+  width: -webkit-calc(33.333333% - 80px);
+  width: calc(33.333333% - 80px);
+  margin-right: 80px;
+  margin-bottom: 80px;
+  float: left;
+  opacity: .5;
+}
+
+.projects__item:hover {
+  opacity: 1;
+}
+
+.projects__nav {
+  text-align: center;
+}
+
+.projects__all, .projects__prev, .projects__next {
+  line-height: 1;
+  padding: 0;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.projects__prev, .projects__next {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-image: url(../img/nav-icon.png);
+  background-position: 50% 50%;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  opacity: .3;
+}
+
+.projects__prev.slick-disabled, .projects__next.slick-disabled {
+  opacity: 0 !important;
+}
+
+.projects__prev:hover, .projects__next:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.projects__prev {
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.projects__prev:hover {
+  -webkit-transform: scale(-1.1, 1.1);
+  -ms-transform: scale(-1.1, 1.1);
+  transform: scale(-1.1, 1.1);
+}
+
+.projects__all {
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 25px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff;
+}
+
+.project.playing {
+  opacity: 1 !important;
+}
+
+.project.playing .project__poster,
+.project.playing .project__play {
+  display: none;
+}
+
+.project__video {
+  position: relative;
+  height: 210px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.project__video:hover .project__poster {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.project__video.loading .project__play {
+  background-size: 50%;
+  background-image: url(../img/loading.gif);
+}
+
+.project__frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project__frame, .project__poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project__frame {
+  background-color: #000;
+}
+
+.project__poster {
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 1;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  -o-transition: transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+}
+
+.project__play {
+  position: absolute;
+  z-index: 2;
+  width: 90px;
+  height: 90px;
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -40px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-image: url(../img/play-icon.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  line-height: 0;
+  border: none;
+  background-color: transparent;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  -o-transition: transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+}
+
+.project__play:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.project__caption {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #fff;
+}
+
+.project__caption span {
+  font-weight: 100;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 3px;
+}
+
+.project__description {
+  margin: 15px 0 0;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 100;
+  color: #fff;
+}
+
 .pricelist {
   padding: 90px 0;
   background-color: #333333;
@@ -760,6 +958,12 @@ section h2 {
   margin-left: 40px;
 }
 
+@media only screen and (max-width: 2020px) {
+  .projects {
+    padding-right: 340px;
+  }
+}
+
 @media only screen and (max-width: 1650px) {
   .why__inner {
     padding-left: 0;
@@ -799,6 +1003,13 @@ section h2 {
     margin-left: 0;
     margin-top: 30px;
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .projects__item {
+    width: -webkit-calc(50% - 80px);
+    width: calc(50% - 80px);
   }
 }
 
@@ -973,6 +1184,10 @@ section h2 {
   .clients__list {
     text-align: center;
   }
+  .projects {
+    padding-right: 0;
+    background-image: none;
+  }
   .pricelist {
     background-image: none;
     padding: 50px 0;
@@ -1005,6 +1220,16 @@ section h2 {
     max-width: 50%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .projects {
+    padding-right: 0;
+  }
+  .projects__list {
+    margin-right: 0;
+  }
+  .projects__item {
+    width: 100%;
+    margin-right: 0;
   }
   .pricelist__item-icon {
     display: block;
