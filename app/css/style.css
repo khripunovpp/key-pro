@@ -967,6 +967,8 @@ section h2 {
   }
   .projects__item {
     margin-right: 40px;
+    width: -webkit-calc(33.333333% - 40px);
+    width: calc(33.333333% - 40px);
   }
 }
 
@@ -1014,8 +1016,8 @@ section h2 {
 
 @media only screen and (max-width: 1300px) {
   .projects__item {
-    width: -webkit-calc(50% - 80px);
-    width: calc(50% - 80px);
+    width: -webkit-calc(50% - 40px);
+    width: calc(50% - 40px);
   }
 }
 
