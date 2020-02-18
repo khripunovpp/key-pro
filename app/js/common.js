@@ -102,7 +102,7 @@ var projects = function() {
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 680,
         settings: {
           slidesToShow: 1,
         }

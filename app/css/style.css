@@ -962,6 +962,12 @@ section h2 {
   .projects {
     padding-right: 340px;
   }
+  .projects__list {
+    margin-right: -40px;
+  }
+  .projects__item {
+    margin-right: 40px;
+  }
 }
 
 @media only screen and (max-width: 1650px) {
@@ -1188,6 +1194,18 @@ section h2 {
     padding-right: 0;
     background-image: none;
   }
+  .projects__list {
+    margin-right: -20px;
+    margin-bottom: -80px;
+  }
+  .projects__nav {
+    margin-top: 80px;
+  }
+  .projects__item {
+    margin-right: 20px;
+    width: -webkit-calc(50% - 20px);
+    width: calc(50% - 20px);
+  }
   .pricelist {
     background-image: none;
     padding: 50px 0;
@@ -1199,6 +1217,24 @@ section h2 {
     padding: 50px 0;
     background-image: none;
     background-color: #161616;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .projects {
+    padding-right: 0;
+  }
+  .projects__list {
+    margin-right: 0;
+  }
+  .projects__item {
+    width: 100%;
+    margin-right: 0;
+  }
+  .footer__slogan {
+    margin-top: 20px;
+    margin-left: 0;
+    display: block;
   }
 }
 
@@ -1220,16 +1256,6 @@ section h2 {
     max-width: 50%;
     margin-left: auto;
     margin-right: auto;
-  }
-  .projects {
-    padding-right: 0;
-  }
-  .projects__list {
-    margin-right: 0;
-  }
-  .projects__item {
-    width: 100%;
-    margin-right: 0;
   }
   .pricelist__item-icon {
     display: block;
@@ -1254,10 +1280,6 @@ section h2 {
   .form__submit {
     width: 100%;
     max-width: none;
-  }
-  .footer__slogan {
-    margin-top: 20px;
-    margin-left: 0;
   }
 }
 

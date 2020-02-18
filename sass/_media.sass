@@ -3,6 +3,10 @@
 @media only screen and (max-width : 2020px)
 	.projects
 		padding-right: 340px
+		&__list
+			margin-right: -40px
+		&__item
+			margin-right: 40px
 	
 @media only screen and (max-width : 1650px)
 	.why
@@ -177,6 +181,14 @@
 	.projects
 		padding-right: 0
 		background-image: none
+		&__list
+			margin-right: -20px
+			margin-bottom: -80px
+		&__nav
+			margin-top: 80px
+		&__item
+			margin-right: 20px
+			width: calc(50% - 20px)
 
 	.pricelist
 		background-image: none
@@ -189,6 +201,20 @@
 		background-image: none
 		background-color: #161616
 
+@media only screen and (max-width : 680px)
+	.projects
+		padding-right: 0
+		&__list
+			margin-right: 0
+		&__item
+			width: 100%
+			margin-right: 0
+	
+	.footer
+		&__slogan
+			margin-top: 20px
+			margin-left: 0
+			display: block
 
 @media only screen and (max-width : 480px)
 	.why
@@ -207,17 +233,6 @@
 				max-width: 50%
 				margin-left: auto
 				margin-right: auto
-
-
-	
-
-	.projects
-		padding-right: 0
-		&__list
-			margin-right: 0
-		&__item
-			width: 100%
-			margin-right: 0
 
 	.pricelist
 		&__item
@@ -243,10 +258,6 @@
 		&__submit
 			width: 100%
 			max-width: none
-	.footer
-		&__slogan
-			margin-top: 20px
-			margin-left: 0
 
 @media only screen and (max-width : 991px) and (max-height : 520px)
 	.nav__phone
