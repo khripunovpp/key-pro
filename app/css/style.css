@@ -269,6 +269,7 @@ select {
 .hero {
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 .hero__inner {
@@ -315,6 +316,17 @@ select {
   height: 100%;
   background-color: #000;
   opacity: 0.5;
+}
+
+.hero__video {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate(50%, 50%);
+  -ms-transform: translate(50%, 50%);
+  transform: translate(50%, 50%);
 }
 
 .hero__title {
@@ -959,8 +971,8 @@ section h2 {
 }
 
 @media only screen and (max-width: 2020px) {
-  .projects {
-    padding-right: 340px;
+  .projects__inner {
+    padding-right: 290px;
   }
   .projects__list {
     margin-right: -40px;
@@ -980,8 +992,7 @@ section h2 {
   .why__title {
     position: relative;
   }
-  .clients__inner,
-  .pricelist__inner {
+  .clients__inner {
     padding-right: 240px;
   }
   .contacts__tail {
@@ -1193,8 +1204,10 @@ section h2 {
     text-align: center;
   }
   .projects {
-    padding-right: 0;
     background-image: none;
+  }
+  .projects__inner {
+    padding-right: 0;
   }
   .projects__list {
     margin-right: -20px;

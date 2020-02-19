@@ -7,17 +7,18 @@ html
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
 		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
 		meta(name='description', content='Только лучшие специалисты из Санкт-Петербурга и Москвы работают на Key-Pro. Бесплатные консультации. Вне зависимости от Вашего решения мы будем рады поделиться нашим опытом.')
-		link(rel='icon', href='img/icon.png', type='image/x-icon')
+		meta(name='theme-color', content='#CE2C1B')
+		meta(name='msapplication-navbutton-color', content='#CE2C1B')
+		meta(name='apple-mobile-web-app-status-bar-style', content='#CE2C1B')
+		meta(name='apple-mobile-web-app-title', content='Bon-L')
+		link(rel='apple-touch-startup-image', href='img/icon.png')
+		link(rel='apple-touch-icon', sizes="108x108", href='img/icon.png')
+		link(rel='apple-touch-icon', href='img/icon.png')
+		link(rel='icon', href='img/icon.png', type='image/png')
 		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:100,400,700,900")
 		link(rel='stylesheet', href='css/slick-theme.css')
 		link(rel='stylesheet', href='css/style.css')
-		//- style.
-		//- 	*,
-		//- 	*::after,
-		//- 	*::before {
-		//- 		outline: 1px solid rgba(255,0,0,.5) !important
-		//- 	}
-		script(src="https://ctr-localhost.ru/vlad/jq.js")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
 
 	body
 		.page
@@ -44,6 +45,7 @@ html
 				
 			section.hero#hero
 				.hero__bg
+					video.hero__video(data-url="img/video", loop="", muted="", playsinline="")
 				.hero__inner
 					.hero__logo
 						svg(xmlns='http://www.w3.org/2000/svg', width='356.328', viewBox='0 0 356.328 293.683')

@@ -98,13 +98,13 @@ var projects = function() {
       {
         breakpoint: 1300,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 2
         }
       },
       {
         breakpoint: 680,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1
         }
       }
     ]
@@ -168,7 +168,25 @@ function onYouTubeIframeAPIReady() {
   makePlayers();
 }
 
+var videoHero = function() {
+  var videoBg = $(".hero__video");
+  videoBg
+    .attr("controlsList", "nodownload")
+    .html(
+      '<source src="' +
+        videoBg.data("url") +
+        '.mp4"><source src="' +
+        videoBg.data("url") +
+        '.webm">'
+    );
+    videoBg.get(0).play();
+    $('body').on('touchend', function(){
+      videoBg.get(0).play();
+    })
+};
+
 $(function() {
+  videoHero();
   navBtn.on("click", function(e) {
     e.preventDefault();
     navBtn.toggleClass("opened");
