@@ -180,7 +180,7 @@ var videoHero = function() {
         '.webm">'
     );
     videoBg.get(0).play();
-    $('body').on('touchend', function(){
+    $('body').on('click touchend', function(){
       videoBg.get(0).play();
     })
 };

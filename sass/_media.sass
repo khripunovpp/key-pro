@@ -1,9 +1,12 @@
 @import "bourbon"
 
 @media only screen and (max-width : 2020px)
-	.projects
+	.pricelist
 		&__inner
 			padding-right: 290px
+	.projects
+		&__inner
+			padding-right: 150px
 		&__list
 			margin-right: -40px
 		&__item
@@ -11,6 +14,9 @@
 			width: calc(33.333333% - 40px)
 	
 @media only screen and (max-width : 1650px)
+	.projects
+		&__inner
+			padding-right: 290px
 	.why
 		&__inner
 			padding-left: 0
@@ -71,11 +77,13 @@
 		&.hide
 			transform: translateY(-100%)
 		&.scrolled
-			background-color: #282828
+			background-color: rgba(#282828, .8)
+			-webkit-backdrop-filter: blur(10px)
 		&.opened
 			height: 100%
 			overflow: auto
-			background-color: #282828
+			background-color: rgba(#282828, .97)
+			-webkit-backdrop-filter: blur(10px)
 			.nav__list,
 			.nav__phone
 				visibility: visible
@@ -97,6 +105,9 @@
 					&::before,
 					&+li::before
 						height: 31px !important
+			a
+				font-weight: 400
+				font-size: 21px
 						
 		&__phone
 			display: block
@@ -157,6 +168,9 @@
 	section h2
 		font-size: 30px
 		margin-bottom: 50px
+		margin-left: auto
+		margin-right: auto
+		display: table
 
 	.why
 		padding: 50px 0
@@ -202,6 +216,14 @@
 		padding: 50px 0
 		background-image: none
 		background-color: #161616
+		&__tail
+			margin-left: auto
+			margin-right: auto
+		&__left
+			text-align: center
+	.form
+		&__title
+			text-align: center
 
 @media only screen and (max-width : 680px)
 	.projects

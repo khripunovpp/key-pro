@@ -76,7 +76,7 @@ select
 
 .nav
 	position: fixed
-	z-index: 2
+	z-index: 4
 	right: 70px
 	top: 0
 	bottom: 0
@@ -180,6 +180,16 @@ select
 	height: 100vh
 	position: relative
 	overflow: hidden
+	&::after
+		content: ''
+		position: absolute
+		z-index: 2
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: #000
+		opacity: 0.5
 	&__inner
 		display: flex
 		flex-direction: column
@@ -187,7 +197,7 @@ select
 		align-items: center
 		height: 100%
 		position: relative
-		z-index: 1
+		z-index: 3
 		padding: 0 240px
 	&__bg
 		position: absolute
@@ -198,17 +208,9 @@ select
 		background-image: url(../img/hero-bg.jpg)
 		background-size: cover
 		background-position: 50% 50%
-		&::after
-			content: ''
-			position: absolute
-			top: 0
-			left: 0
-			width: 100%
-			height: 100%
-			background-color: #000
-			opacity: 0.5
 	&__video
 		position: absolute
+		z-index: 1
 		right: 50%
 		bottom: 50%
 		min-width: 100%
@@ -481,8 +483,6 @@ section h2
 	background-image: url(../img/pricelist-bg.png)
 	background-repeat: no-repeat
 	background-position: 50% 100%
-	&__list
-		max-width: 920px
 	&__item
 		color: #fff
 		&+&
@@ -623,6 +623,7 @@ section h2
 		font-weight: 100
 		appearance: none
 		border-bottom: 1px solid #9F9F9F
+		appearance: none
 	&__error
 		margin: 0
 		background-color: #ffcaca
@@ -631,6 +632,7 @@ section h2
 		align-self: flex-end
 		min-width: 245px
 		max-width: none
+		appearance: none
 	&__result
 		margin-top: 20px
 		padding: 5px 10px
@@ -640,7 +642,7 @@ section h2
 			background-color: #7dff83
 
 .footer
-	padding: 45px 0
+	padding: 15px 0
 	text-align: center
 	color: #fff
 	background-color: $color
